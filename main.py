@@ -24,8 +24,17 @@ def choose_character(prompt):
 
 if __name__ == "__main__":
     print("게임 시작")
-    player = choose_character("당신의 캐릭터를 선택하세요: ")
-    enemy = choose_character("상대 캐릭터를 선택하세요: ")
 
-    battle = BattleManager(player, enemy)
-    winner = battle.start_battle()
+    while True:  # 게임 루프
+        player = choose_character("당신의 캐릭터를 선택하세요: ")
+        enemy = choose_character("상대 캐릭터를 선택하세요: ")
+
+        battle = BattleManager(player, enemy)
+        winner = battle.start_battle()
+
+        replay = input("\n게임을 다시 하시겠습니까? (y/n): ").lower()
+        if replay != "y":
+            print("게임을 종료합니다. 감사합니다!")
+            break
+
+# 이긴 사람이 전투를 계속 이어 나간다.

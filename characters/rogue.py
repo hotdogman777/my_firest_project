@@ -20,4 +20,4 @@ class Rogue(Character):
             print(f"{self.name}의 기습 성공! {damage} 피해를 입힙니다.!")
             target.take_damage(damage)
         else:
-            print(f"{self.name}의 기습이 실패했습니다... 공겨가지 못했습니다.")
+            print(f"{self.name}의 기습이 실패했습니다... 공격가지 못했습니다.")
